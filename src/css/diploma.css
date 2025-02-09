@@ -138,6 +138,8 @@ body > aside {
   text-align: center;
   gap: 12px;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  max-width: 480px;
+  margin: 0 auto;
 
   label span {
     color: white;

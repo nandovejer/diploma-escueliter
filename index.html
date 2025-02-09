@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diploma Escueliter</title>
-    <script type="module" src="./src/js/html2canvas.min.js"></script>
-    <script type="module" src="/index.js"></script>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://nandovejer.github.io/;">
+    <script type="module" src="https://nandovejer.github.io/diploma-escueliter/src/js/html2canvas.min.js"></script>
+    <script type="module" src="https://nandovejer.github.io/diploma-escueliter/index.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-
-
     <header>
         <h1>Diploma Escueliter</h1>
     </header>
@@ -20,10 +20,7 @@
 
 
     <main>
-
-
         <section id="printContent" class="diploma">
-
             <article>
                 <img class="logo" src="./src/img/logo.png" alt="">
                 <img class="escuelita" src="./src/img/escuelita.png" alt="">
@@ -31,11 +28,9 @@
                 <p class="añadirNombre">
                     <span>a don/doña</span>
                     <span id="outputName" class="outputName"></span>
-
                 </p>
                 <p class="descripcion">Por concluir satisfactoriamente toitos los cursos habidos y por haver en la
-                    <b>Escuelita de
-                        Carnaval</b>.
+                    <b>Escuelita de Carnaval</b>.
                 </p>
                 <p class="firma">
                     <img class="chapa" src="./src/img/chapa.png" alt="">
@@ -43,9 +38,6 @@
                 </p>
             </article>
         </section>
-
-
-
     </main>
 
     <aside>
