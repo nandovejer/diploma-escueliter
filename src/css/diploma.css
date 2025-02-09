@@ -1,40 +1,55 @@
-* {
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  align-items: center;
-  gap: 24px;
-  background: linear-gradient(25deg, gold, orange, gold) no-repeat center center /
-    cover;
+  padding: 24px;
   min-height: 100svh;
-  color: white;
-  text-shadow: -1px -2px 0 orange, 1px 2px 0 orange;
+
+  background-color: #ffffff;
+  opacity: 0.8;
+  background-size: 20px 20px;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #cecfd5,
+    #cecfd5 1px,
+    #ffffff 1px,
+    #ffffff
+  );
 }
 
-h1 {
-  font-weight: lighter;
-  font-size: 56px;
-  letter-spacing: -1px;
-  margin: 12px 0;
-  color: white;
-  text-shadow: -1px -2px 0 orange, 1px 2px 0 orange;
+body > header,
+body > main,
+body > footer {
+  padding: 24px 0;
+  text-align: center;
 }
+
+body > header {
+  text-align: center;
+  h1 {
+    font-weight: lighter;
+    color: #ffffff;
+    font-size: 3.75em;
+    text-shadow: 0px 2px 4px darkorange, 0px -2px 60px black;
+  }
+}
+
 p {
-  margin: 0;
+  color: #333;
 }
-
 body > main {
-  border: 12px solid #f8e995;
-  background-color: #f8e995;
-  box-shadow: 0px 4px 60px #c97406;
+  position: fixed;
+  top: -9999999px;
 }
 .diploma {
+  position: fixed;
+  top: -9999999px;
   color: #333;
   display: block;
   background: rgb(248, 233, 149) url("../img/lapiz.png") repeat 0 0 / 24px;
@@ -60,81 +75,100 @@ body > main {
       "descripcion descripcion descripcion"
       "firma firma firma";
   }
+
+  .outputName {
+    border-bottom: 1px solid grey;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    display: inline-block;
+  }
+
+  .logo {
+    width: 128px;
+    grid-area: logo;
+  }
+
+  .escuelita {
+    display: inline-block;
+    width: 300px;
+    grid-area: escuelita;
+    align-self: flex-end;
+  }
+
+  .enunciado {
+    font-weight: bold;
+    grid-area: enunciado;
+    line-height: 1.25em;
+  }
+
+  .añadirNombre {
+    grid-area: añadirnombre;
+  }
+
+  .descripcion {
+    grid-area: descripcion;
+    font-size: 22px;
+  }
+  .firma {
+    display: inline-block;
+    padding: 0.25em 0 0 0;
+    font-size: 18px;
+    grid-area: firma;
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .chapa {
+      width: 80px;
+    }
+
+    i {
+      width: fit-content;
+      border-top: 1px solid grey;
+    }
+  }
 }
 
-aside {
-  padding: 0;
-}
-
-button {
-  background-color: green;
-  color: white;
-  box-shadow: none;
-  padding: 12px 24px;
+body > aside {
+  background-color: darkorange;
+  padding: 24px;
   border-radius: 4px;
-  outline: none;
-  border: 0;
-  cursor: pointer;
-}
-
-input {
-  background: transparent;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid grey;
-  border-radius: 0;
-  font-size: 28px;
-  color: #333;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  width: calc(100% - 220px);
-}
-
-.logo {
-  width: 128px;
-  grid-area: logo;
-}
-
-.escuelita {
-  display: inline-block;
-  width: 300px;
-  grid-area: escuelita;
-  align-self: flex-end;
-}
-
-.enunciado {
-  font-weight: bold;
-  grid-area: enunciado;
-  line-height: 1.25em;
-}
-
-.añadirNombre {
-  grid-area: añadirnombre;
-}
-
-.descripcion {
-  grid-area: descripcion;
-  font-size: 22px;
-}
-
-.firma {
-  display: inline-block;
-  padding: 0.25em 0 0 0;
-  font-size: 18px;
-  grid-area: firma;
-  justify-self: flex-end;
   display: flex;
   flex-direction: column;
   align-items: center;
-  .chapa {
-    width: 80px;
+  text-align: center;
+  gap: 12px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+  label span {
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 0 0.5em 0;
+    font-size: 1.5em;
   }
 
-  i {
-    width: fit-content;
-    border-top: 1px solid grey;
+  label,
+  input,
+  button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  input,
+  button {
+    height: 48px;
+    border-radius: 4px;
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    padding: 1em;
+  }
+
+  button {
+    background-color: green;
+    color: white;
   }
 }
 
-aside {
-  display: block;
+body > footer {
 }

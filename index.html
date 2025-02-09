@@ -11,12 +11,16 @@
 </head>
 
 <body>
+
+
     <header>
-
         <h1>Diploma Escueliter</h1>
-
     </header>
+
+
+
     <main>
+
 
         <section id="printContent" class="diploma">
 
@@ -26,7 +30,8 @@
                 <p class="enunciado"> Extiende el presente <br /> DIPLOMA</p>
                 <p class="añadirNombre">
                     <span>a don/doña</span>
-                    <input type="text" placeholder="aquí tu nombre">
+                    <span id="outputName" class="outputName"></span>
+
                 </p>
                 <p class="descripcion">Por concluir satisfactoriamente toitos los cursos habidos y por haver en la
                     <b>Escuelita de
@@ -44,6 +49,11 @@
     </main>
 
     <aside>
+        <label for="hereYourName">
+            <span> Tu nombre aquí, que no sea mu largo, ar favó</span>
+            <input type="text" id="hereYourName" placeholder="nombre"
+                oninput="document.getElementById('outputName').innerHTML = this.value">
+        </label>
         <button id="contentToPdf">Descargar el diploma</button>
     </aside>
     <footer>
