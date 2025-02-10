@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; script-src 'self' 'unsafe-inline' https://nandovejer.github.io/;">
     <script type="module" src="https://nandovejer.github.io/diploma-escueliter/src/js/html2canvas.min.js"></script>
-    <script type="module" src="https://nandovejer.github.io/diploma-escueliter/index.js"></script>
+    <script type="module" src="./index.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -17,7 +17,22 @@
         <h1>Diploma Escueliter</h1>
     </header>
 
+    <aside>
+        <label for="hereYourName">
+            <span> Tu nombre aquí, que no sea mu largo, ar favó</span>
+            <input type="text" id="hereYourName" placeholder="nombre"
+                oninput="document.getElementById('outputName').innerHTML = this.value">
+        </label>
+        <button id="contentToImg">Descargar el diploma</button>
+    </aside>
 
+
+    <footer>
+        <small>
+            Si no tienes ni idea de que va esto, pregunta en twitter con el
+            <a href="https://x.com/hashtag/escueliter">#Escueliter</a>
+        </small>
+    </footer>
 
     <main>
         <section id="printContent" class="diploma">
@@ -39,21 +54,6 @@
             </article>
         </section>
     </main>
-
-    <aside>
-        <label for="hereYourName">
-            <span> Tu nombre aquí, que no sea mu largo, ar favó</span>
-            <input type="text" id="hereYourName" placeholder="nombre"
-                oninput="document.getElementById('outputName').innerHTML = this.value">
-        </label>
-        <button id="contentToPdf">Descargar el diploma</button>
-    </aside>
-    <footer>
-        <small>
-            Si no tienes ni idea de que va esto, pregunta en twitter con el
-            <a href="https://x.com/hashtag/escueliter">#Escueliter</a>
-        </small>
-    </footer>
 
 </body>
 

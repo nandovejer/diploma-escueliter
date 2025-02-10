@@ -22,7 +22,9 @@ body {
     #ffffff
   );
 }
-
+p {
+  color: #333;
+}
 body > header,
 body > main,
 body > footer {
@@ -40,16 +42,18 @@ body > header {
   }
 }
 
-p {
-  color: #333;
-}
-body > main {
+body > main,
+body > main .diploma {
   position: fixed;
-  top: -9999999px;
+  top: -99999999px;
 }
-.diploma {
-  position: fixed;
-  top: -9999999px;
+
+body.saving > main,
+body.saving > main .diploma {
+  top: 0;
+}
+
+body .diploma {
   color: #333;
   display: block;
   background: rgb(248, 233, 149) url("../img/lapiz.png") repeat 0 0 / 24px;
@@ -169,6 +173,14 @@ body > aside {
   button {
     background-color: green;
     color: white;
+    cursor: pointer;
+  }
+
+  .outputImg {
+    outline: 1px solid green;
+    width: 220px;
+    height: 128px;
+    display: block;
   }
 }
 
